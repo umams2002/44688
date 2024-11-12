@@ -22,10 +22,10 @@ support franchise viability and success matters.
 ## Installation
 Step-by-step instructions on how to install and set up your project.
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/umams2002/44688
 
-# Navigate to the project directory
+### Navigate to the project directory
 cd 44688
 
 # Install python latest version
