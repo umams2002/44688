@@ -39,6 +39,13 @@ ds-venv\Scripts\Activate
 ### Install dependencies
 pip install -r [requirements.txt]
 
+This project is used for Franchise expansion and Business expansion proposals. It provides valuable forecasts and insights to assist in making data-driven business decisions. Follow the steps below to use the project:
+
+### Running the Project
+1. **Activate the virtual environment**:
+   ```bash
+   ds-venv\Scripts\Activate
+
 ## Features
 List of features and functionalities provided by your project.
 
