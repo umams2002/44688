@@ -1,5 +1,5 @@
 # 44688
-CapstoneProject_Uma
+CapstoneProject Uma M Subramanian
 # Income Prediction in the USA
 
 ## Description
@@ -28,15 +28,15 @@ git clone https://github.com/umams2002/44688
 ### Navigate to the project directory
 cd 44688
 
-# Install python latest version
+### Install python latest version
 install --py
 py --version
 
-# Create and activate environment
+### Create and activate environment
 py -m venv ds-venv
 ds-venv\Scripts\Activate
 
-# Install dependencies
+### Install dependencies
 pip install -r [requirements.txt]
 
 ## Features
