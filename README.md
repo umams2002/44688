@@ -22,18 +22,17 @@ support franchise viability and success matters.
 ## Installation
 Step-by-step instructions on how to install and set up your project.
 
-```bash
 # Clone the repository
 git clone https://github.com/umams2002/44688
 
 # Navigate to the project directory
 cd 44688
 
-#Install python latest version
+# Install python latest version
 install --py
 py --version
 
-#Create and activate environment
+# Create and activate environment
 py -m venv ds-venv
 ds-venv\Scripts\Activate
 
