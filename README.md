@@ -29,6 +29,14 @@ git clone https://github.com/umams2002/44688
 # Navigate to the project directory
 cd 44688
 
+#Install python latest version
+install --py
+py --version
+
+#Create and activate environment
+py -m venv ds-venv
+ds-venv\Scripts\Activate
+
 # Install dependencies
 pip install -r [requirements.txt]
 
