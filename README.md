@@ -30,3 +30,22 @@ git clone https://github.com/umams2002/44688
 cd 44688
 
 # Install dependencies
+pip install -r [requirements.txt]
+
+## Features
+List of features and functionalities provided by your project.
+
+Forecasts franchise viability based on income levels
+Identifies optimal locations for franchise expansion
+Provides data-driven insights for business decisions
+
+## License
+Include the license under which your project is distributed.
+
+This project is licensed under the SUAJ Trading LLC.
+
+##Contact
+Provide ways to get in touch with you or the maintainers of the project.
+
+Email: umams2002@gmail.com
+GitHub: umams2002
