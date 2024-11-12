@@ -15,7 +15,6 @@ support franchise viability and success matters.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
