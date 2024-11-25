@@ -90,7 +90,7 @@ app_ui = ui.page_fluid(
              
             ui.input_select("hours_per_week", "Hours per Week:", 
                           choices=to_str_choices(income_data["hours-per-week"], descending=True)),
-                         
+            ui.input_select("relationship", "Relationship:", choices=to_str_choices(income_data["relationship"])),              
             class_="sidebar"
         ),
         # Layout for the map and data grid with titles and fixed heights
@@ -123,7 +123,8 @@ def server(input, output, session):
             user_input = {
                 "age": input.age(),
                 "education-num": input.education_num(),
-                "hours-per-week": input.hours_per_week()
+                "hours-per-week": input.hours_per_week(),
+                "relationship": input.relationship(),
             }
             input_df = prepare_income_input(user_input)
             prediction = best_model.predict(input_df)[0]

@@ -1,0 +1,8 @@
+
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "python-shiny",
+    "entrypoint": "app"
+  }
+}
