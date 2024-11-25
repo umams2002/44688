@@ -33,4 +33,4 @@ jobs:
         run: |
           pip install rsconnect-python
             rsconnect deploy shiny .
-            --title "Income Prediction App"
+            --title "IncomePredictionApp"

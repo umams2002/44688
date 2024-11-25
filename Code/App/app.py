@@ -13,6 +13,7 @@ import os
 import folium
 from shiny.types import ImgData
 import matplotlib
+import seaborn as sns
 matplotlib.use('Agg')  # Set the backend before importing pyplot
 import matplotlib.pyplot as plt
 
@@ -20,6 +21,8 @@ import matplotlib.pyplot as plt
 best_model = joblib.load("AppData/best_model.pkl")
 best_columns = joblib.load("AppData/model_columns.pkl")
 income_data = pd.read_csv("AppData/eda_processed_adult.csv")
+# Drop the 'fnlwgt' column from the income data
+income_data = income_data.drop(columns=['fnlwgt'])
 scaler = joblib.load("AppData/best_scaler.pkl")
 
 # Define the to_str_choices function
@@ -32,15 +35,24 @@ def to_str_choices(series, descending=False):
 def ensure_numeric(df, columns):
     for col in columns:
         df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+        print(df[col])
     return df
+
+best_features = ['age', 'educational-num', 'hours-per-week', 'relationship', 'marital-status', 'capital-gain']
 
 def prepare_income_input(user_input):
     input_df = pd.DataFrame([user_input])
     input_df = ensure_numeric(input_df, best_columns)
     input_df = pd.get_dummies(input_df)
+    
+    # Ensure all necessary columns are present
     input_df = input_df.reindex(columns=best_columns, fill_value=0)
+    
+    # Scale the input data
+    columns_to_scale = [col for col in best_columns if col in scaler.feature_names_in_]
     scaled_input_df = input_df.copy()
-    scaled_input_df[scaler.feature_names_in_] = scaler.transform(input_df[scaler.feature_names_in_])
+    scaled_input_df[columns_to_scale] = scaler.transform(input_df[columns_to_scale])
+    
     return scaled_input_df
 
 
@@ -84,14 +96,30 @@ app_ui = ui.page_fluid(
 
     ui.layout_sidebar(
         ui.sidebar(
-            ui.h3("Income Prediction Dashboard", width=1),
+            ui.h3("Income Prediction App", width=1),
             ui.input_select("age", "Age:", choices=to_str_choices(income_data["age"], descending=True)),
-            ui.input_select("education_num", "Education Level:",choices=to_str_choices(income_data["educational-num"], descending=True)),
+            ui.input_select("educational_num", "Education Level:",choices=to_str_choices(income_data["educational-num"], descending=True)),
              
             ui.input_select("hours_per_week", "Hours per Week:", 
                           choices=to_str_choices(income_data["hours-per-week"], descending=True)),
-            ui.input_select("relationship", "Relationship:", choices=to_str_choices(income_data["relationship"])),              
+            ui.input_select("relationship", "Relationship:", choices=to_str_choices(income_data["relationship"])),  
+            ui.input_select("marital_status", "Marital Status:", choices=to_str_choices(income_data["marital-status"])),            
+            ui.input_select("capital_gain", "Capital Gain:", choices = to_str_choices(income_data["capital-gain"])),
+
             class_="sidebar"
+        ),
+         # Main content area with reduced height for value boxes
+        ui.layout_column_wrap(
+             ui.div(
+                ui.value_box("", ui.output_text("average_income")),
+                class_="value-box"  # Apply custom class for height control
+            ),
+            ui.div(
+               ui.input_select("INCOME_SELECT_INPUT", "Select Income Map Column:", choices=best_features, selected="age"),),
+            
+            
+           
+            width=1/2
         ),
         # Layout for the map and data grid with titles and fixed heights
         ui.layout_column_wrap(
@@ -104,7 +132,7 @@ app_ui = ui.page_fluid(
             # Updated Map section
             ui.div(
                 ui.h3("Income Distribution Map"),
-                ui.output_plot("income_map"),  # Changed to output_plot
+                ui.output_plot("income_violin_plot"),  # Changed to output_plot
                 class_="fixed-height-container"
             ),
                     
@@ -119,19 +147,23 @@ def server(input, output, session):
     @output
     @render.text
     def predicted_income():
-        try:
-            user_input = {
-                "age": input.age(),
-                "education-num": input.education_num(),
-                "hours-per-week": input.hours_per_week(),
-                "relationship": input.relationship(),
-            }
-            input_df = prepare_income_input(user_input)
-            prediction = best_model.predict(input_df)[0]
-            return f"Predicted Income: {'≤50K' if prediction == 0 else '>50K'}"
-        except Exception as e:
-            return f"Error: {str(e)}"
-
+        user_input = {
+            "age": input.age(),
+            "educational-num": input.educational_num(),
+            "hours-per-week": input.hours_per_week(),
+            "relationship": input.relationship(),
+            "marital-status": input.marital_status(),
+            "capital-gain": input.capital_gain(),
+            "capital-loss": "0"  # Default value
+            
+        }
+        print(user_input)
+        scaled_input_df = prepare_income_input(user_input)
+        print(scaled_input_df)
+        prediction = best_model.predict(scaled_input_df)
+        print(prediction)
+        return f"Predicted Income: {prediction[0]}"
+    
     @output
     @render.text
     def average_income():
@@ -140,7 +172,7 @@ def server(input, output, session):
     @output
     @render.data_frame
     def income_data_grid():
-        return render.DataGrid(income_data,filters=True)
+        return render.DataGrid(income_data, filters=True)
 
     
     @output
@@ -151,28 +183,23 @@ def server(input, output, session):
         chart = filtered_data.plot(kind='bar')
         return ui.output_plot(chart.get_figure())
 
+   
     @output
     @render.plot
-    def income_map():
-        # Create a figure and axis objects with specific backend
-        fig = plt.figure(figsize=(10, 6))
-        ax = fig.add_subplot(111)
+    def income_violin_plot():
         
-        # Create the visualization
-        income_counts = income_data['income'].value_counts()
-        bars = ax.bar(income_counts.index, income_counts.values, color=['#81c784', '#2e7d32'])
-        
-        # Add titles and labels
-        ax.set_title('Income Distribution', pad=20)
-        ax.set_xlabel('Income Category')
-        ax.set_ylabel('Count')
-        
-        # Adjust layout to prevent cutting off
-        fig.tight_layout()
-        
-        return fig
+        # Create a violin plot for income vs age
+        plt.figure(figsize=(12, 6))
+        sns.violinplot(data=income_data, x='age', y='income', palette='viridis')
+        plt.title('Income vs Age')
+        plt.xlabel('Age')
+        plt.ylabel('Income')
+        plt.xticks(rotation=45)
+        plt.grid(True)
+        plt.tight_layout()
+        plt.show()
 
-    
+   
 
 # Render the App
 app = App(app_ui, server)
