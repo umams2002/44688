@@ -18,9 +18,9 @@ support franchise viability and success matters.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deliverables](#deliverables)
 - [Features](#features)
 - [Key Findings](#key-finding)
+- [Deliverables](#deliverables)
 - [License](#license)
 - [Contact](#contact)
 
@@ -54,6 +54,7 @@ This project is used for Franchise expansion and Business expansion proposals. I
    ds-venv\Scripts\Activate
 
 ## Deliverables
+
 ### App Link : https://umams2002.shinyapps.io/incomepredictionapp/
 ### Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
 ### Github Code Repository link: https://github.com/umams2002/44688
@@ -79,3 +80,4 @@ Provide ways to get in touch with you or the maintainers of the project.
 
 Email: umams2002@gmail.com
 GitHub: umams2002
+
