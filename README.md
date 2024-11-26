@@ -1,6 +1,6 @@
 # 44688
 CapstoneProject Uma M Subramanian
-# Income Prediction in the USA
+# Income Prediction in USA
 ## App Link : https://umams2002.shinyapps.io/incomepredictionapp/
 ## Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
 ## Github Code Repository link: https://github.com/umams2002/44688
@@ -18,7 +18,7 @@ support franchise viability and success matters.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deliverables] (#deliverables)
+- [Deliverables](#deliverables)
 - [Features](#features)
 - [Key Findings](#key-finding)
 - [License](#license)
