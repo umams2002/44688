@@ -1,6 +1,10 @@
 # 44688
 CapstoneProject Uma M Subramanian
 # Income Prediction in the USA
+App Link : https://umams2002.shinyapps.io/incomepredictionapp/
+Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
+Github Code Repository link: https://github.com/umams2002/44688
+
 
 ## Description
 This project predicts income levels in different regions of the
@@ -14,9 +18,12 @@ support franchise viability and success matters.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Deliverables] (#deliverables)
 - [Features](#features)
+- [Key Findings](#key-finding)
 - [License](#license)
 - [Contact](#contact)
+
 
 ## Installation
 Step-by-step instructions on how to install and set up your project.
@@ -46,12 +53,21 @@ This project is used for Franchise expansion and Business expansion proposals. I
    ```bash
    ds-venv\Scripts\Activate
 
+## Deliverables
+App Link : https://umams2002.shinyapps.io/incomepredictionapp/
+Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
+Github Code Repository link: https://github.com/umams2002/44688
+
 ## Features
 List of features and functionalities provided by your project.
 
 Forecasts franchise viability based on income levels
 Identifies optimal locations for franchise expansion
 Provides data-driven insights for business decisions
+
+## Key Finding
+The analysis highlights that income prediction is significantly influenced by specific personal and demographic factors. These include age, education level, weekly working hours, and relationship status, underscoring their pivotal role in determining earning potential. The results offer practical insights for customizing policies that alleviate income inequality and promote economic growth. The Income Prediction App was developed to highlight the most important features, insights, and findings in one location.
+![Income prediction App](App.PNG)
 
 ## License
 Include the license under which your project is distributed.
