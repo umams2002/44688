@@ -1,9 +1,9 @@
 # 44688
 CapstoneProject Uma M Subramanian
 # Income Prediction in the USA
-App Link : https://umams2002.shinyapps.io/incomepredictionapp/
-Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
-Github Code Repository link: https://github.com/umams2002/44688
+## App Link : https://umams2002.shinyapps.io/incomepredictionapp/
+## Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
+## Github Code Repository link: https://github.com/umams2002/44688
 
 
 ## Description
@@ -54,9 +54,9 @@ This project is used for Franchise expansion and Business expansion proposals. I
    ds-venv\Scripts\Activate
 
 ## Deliverables
-App Link : https://umams2002.shinyapps.io/incomepredictionapp/
-Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
-Github Code Repository link: https://github.com/umams2002/44688
+### App Link : https://umams2002.shinyapps.io/incomepredictionapp/
+### Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
+### Github Code Repository link: https://github.com/umams2002/44688
 
 ## Features
 List of features and functionalities provided by your project.
