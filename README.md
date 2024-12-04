@@ -7,8 +7,10 @@ CapstoneProject Uma M Subramanian
 ## EDA process Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/eda_process.ipynb
 ## Model building Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/model_building.ipynb
 ## Raw Data source:https://github.com/umams2002/44688/blob/main/Code/adult.csv
-## EDA Processed Data CSV file:https://github.com/umams2002/44688/blob/main/Data/eda_processed_adult.csv
-## Best Model Pickle file:https://github.com/umams2002/44688/blob/main/Data/best_model.pkl
+## EDA Processed Data CSV file: https://github.com/umams2002/44688/blob/main/Data/eda_processed_adult.csv
+## Best Model Pickle file: https://github.com/umams2002/44688/blob/main/Data/best_model.pkl
+## Commit History: https://github.com/umams2002/44688/commits
+
 
 ## Description
 This project predicts income levels in different regions of the
@@ -18,13 +20,14 @@ places for franchise expansion for the tax preparation. The predictive models wi
 This research provides valuable forecasts that can assist guide data-driven
 business decisions, such as identifying places with income levels that
 support franchise viability and success matters.
-
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Deliverables](#deliverables)
+- [Process Involved](#process-involved)
+- [Predictive Analysis](#predictive-analysis)
 - [Features](#features)
 - [Key Findings](#key-finding)
-- [Deliverables](#deliverables)
 - [License](#license)
 - [Contact](#contact)
 
