@@ -117,15 +117,15 @@ Provides data-driven insights for business decisions
 ## Key Finding
 The analysis highlights that income prediction is significantly influenced by specific personal and demographic factors. These include age, education level, weekly working hours, and relationship status, underscoring their pivotal role in determining earning potential. The results offer practical insights for customizing policies that alleviate income inequality and promote economic growth. The Income Prediction App was developed to highlight the most important features, insights, and findings in one location.
 ![Income prediction App](App.PNG)
-Influential Factors in Income Growth:The analysis revealed that key independent variables, including age, number of hours worked per week, education level, and the unique factor relationship status, are significant drivers of income growth. These factors provide actionable insights into understanding income dynamics across different demographics.
-Model Performance and Metrics:The study implemented and evaluated multiple machine learning models, including Random Forest, Gradient Boosting, Support Vector Model, Logistic Regression , Multiple Linear Regression, etc.The models' accuracy, precision, and confusion matrices allowed for a thorough assessment of their predictive power. These metrics substantiate the models' dependability and facilitate their use in practical situations.
-Implications and Justification of Results:The analysis highlights how crucial socioeconomic and demographic factors are in determining income levels. 
+# Influential Factors in Income Growth:The analysis revealed that key independent variables, including age, number of hours worked per week, education level, and the unique factor relationship status, are significant drivers of income growth. These factors provide actionable insights into understanding income dynamics across different demographics.
+# Model Performance and Metrics:The study implemented and evaluated multiple machine learning models, including Random Forest, Gradient Boosting, Support Vector Model, Logistic Regression , Multiple Linear Regression, etc.The models' accuracy, precision, and confusion matrices allowed for a thorough assessment of their predictive power. These metrics substantiate the models' dependability and facilitate their use in practical situations.
+# Implications and Justification of Results:The analysis highlights how crucial socioeconomic and demographic factors are in determining income levels. 
 ![Relationship Vs Income](husband.PNG)
 ![Income Vs Age](incomevsage.PNG)
 ![Income Vs Education](IncomeVsEducation.PNG)
-### Identify regions of high-income potential for franchise expansion.
-### Guide tax preparation services by targeting demographics and locations with specific income characteristics.
-### item Offer strategic insights for policy-making and investment decisions, focusing on education and workforce development to enhance income levels
+# Identify regions of high-income potential for franchise expansion.
+# Guide tax preparation services by targeting demographics and locations with specific income characteristics.
+# Offer strategic insights for policy-making and investment decisions, focusing on education and workforce development to enhance income levels
 
 ## License
 Include the license under which your project is distributed.
