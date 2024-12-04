@@ -4,7 +4,11 @@ CapstoneProject Uma M Subramanian
 ## App Link : https://umams2002.shinyapps.io/incomepredictionapp/
 ## Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
 ## Github Code Repository link: https://github.com/umams2002/44688
-
+## EDA process Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/eda_process.ipynb
+## Model building Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/model_building.ipynb
+## Raw Data source:https://github.com/umams2002/44688/blob/main/Code/adult.csv
+## EDA Processed Data CSV file:https://github.com/umams2002/44688/blob/main/Data/eda_processed_adult.csv
+## Best Model Pickle file:https://github.com/umams2002/44688/blob/main/Data/best_model.pkl
 
 ## Description
 This project predicts income levels in different regions of the
