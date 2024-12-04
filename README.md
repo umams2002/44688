@@ -59,6 +59,50 @@ This project is used for Franchise expansion and Business expansion proposals. I
 ### Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
 ### Github Code Repository link: https://github.com/umams2002/44688
 
+##  Process Involved
+##  Data Cleaning and Preprocess
+![Data Cleaning and Preprocess](6.PNG)
+
+##  EDA Process
+These are the steps involved in the EDA process
+1. Project preparation and Import Libraries
+2. Data Acquisition (Load Dataset) and Inspection
+3. Data Cleaning and Preparation (or Data Prepossessing)
+4. Initial Descriptive Statistics
+5. Initial Data Distribution for Numeric Columns
+6. Initial Data Distribution for Category Columns
+7. Initial Visualizations
+8. Initial Storytelling and Presentation
+EDA jupyter notebook link:  https://github.com/umams2002/44688/blob/main/Code/eda_process.ipynb
+https://github.com/umams2002/44688/blob/main/Code/InitialVisual.ipynb
+
+Initial Visuals:
+
+![Histogram Chart](20.PNG) ![Histogram Chart ](19.PNG)
+![Pair Plot Chart ](31.PNG)
+![Correlation Heat Map](33.PNG)
+
+## Predictive Analysis
+Predictive Analysis Notebook: https://github.com/umams2002/44688/blob/main/Code/model_building.ipynb
+
+![Predictive Analysis Process Flow](PredictiveAnalysisprocessFlow.PNG)
+
+##  Train the Model
+Model Selection
+This project uses these models for performance and data analysis.
+• Logistic Regression
+• Multiple Linear Regression
+• RandomForestClassifier
+• Gradient Boosting
+• Support Vector Machine
+• K-Nearest Neighbors
+• XGBoost
+• Lasso Regression
+• Decision Tree
+
+![Model Comparison](compare5.PNG) ![Model Comparison](compare2.PNG) ![Model Comparison](compare3.PNG) ![Model Comparison](compare4.PNG)
+
+![Model Metrics](Metrics.PNG)
 ## Features
 List of features and functionalities provided by your project.
 
@@ -69,6 +113,15 @@ Provides data-driven insights for business decisions
 ## Key Finding
 The analysis highlights that income prediction is significantly influenced by specific personal and demographic factors. These include age, education level, weekly working hours, and relationship status, underscoring their pivotal role in determining earning potential. The results offer practical insights for customizing policies that alleviate income inequality and promote economic growth. The Income Prediction App was developed to highlight the most important features, insights, and findings in one location.
 ![Income prediction App](App.PNG)
+Influential Factors in Income Growth:The analysis revealed that key independent variables, including age, number of hours worked per week, education level, and the unique factor relationship status, are significant drivers of income growth. These factors provide actionable insights into understanding income dynamics across different demographics.
+Model Performance and Metrics:The study implemented and evaluated multiple machine learning models, including Random Forest, Gradient Boosting, Support Vector Model, Logistic Regression , Multiple Linear Regression, etc.The models' accuracy, precision, and confusion matrices allowed for a thorough assessment of their predictive power. These metrics substantiate the models' dependability and facilitate their use in practical situations.
+Implications and Justification of Results:The analysis highlights how crucial socioeconomic and demographic factors are in determining income levels. 
+![Relationship Vs Income](husband.PNG)
+![Income Vs Age](incomevsage.PNG)
+![Income Vs Education](IncomeVsEducation.PNG)
+### Identify regions of high-income potential for franchise expansion.
+### Guide tax preparation services by targeting demographics and locations with specific income characteristics.
+### item Offer strategic insights for policy-making and investment decisions, focusing on education and workforce development to enhance income levels
 
 ## License
 Include the license under which your project is distributed.
