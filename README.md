@@ -1,5 +1,5 @@
 # 44688
-CapstoneProject Uma M Subramanian
+### Author:  Uma Maheswari Subramanian
 # Income Prediction in USA
 ## App Link : https://umams2002.shinyapps.io/incomepredictionapp/
 ## Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2

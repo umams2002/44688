@@ -1,3 +1,8 @@
+### Author: Uma Maheswari Subramanian
+### Date: 2024-12-04
+### Description: This is the main file for the Income Prediction App. It contains the UI layout and server function for the app.
+### The app allows users to input their information and get a prediction of their income level. It also displays the average income in the dataset, a data grid of the income data, and a violin plot of income vs age.
+
 # Import necessary modules
 from shiny import App, ui, render, Inputs  # Import everything directly from shiny
 import pandas as pd
