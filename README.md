@@ -2,7 +2,7 @@
 ### Author:  Uma Maheswari Subramanian
 # Income Prediction in USA
 ## App Link : https://umams2002.shinyapps.io/incomepredictionapp/
-## Overleaf Report link: https://www.overleaf.com/read/whfnhmpkgktc#296df2
+## Overleaf Report link: https://www.overleaf.com/read/nrgbcdmvhvqj#f273fd
 ## Github Code Repository link: https://github.com/umams2002/44688
 ## EDA process Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/eda_process.ipynb
 ## Model building Jupyter Notebook link: https://github.com/umams2002/44688/blob/main/Code/model_building.ipynb
